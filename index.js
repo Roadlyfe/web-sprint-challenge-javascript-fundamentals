@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+//the internal function is using closure to reach outside of it's own scope to access the information. 
 
 
 
@@ -186,21 +186,31 @@ CuboidMaker.prototype.surfaceArea = function(){
 
 
 
-  const cuboid = new CuboidMaker(4, 5, 5);
+  // const cuboid = new CuboidMaker(4, 5, 5);
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+// console.log(cuboid.volume()); // 100
+// console.log(cuboid.surfaceArea()); // 130
  
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
-
+constructor(object){
+  this.length = object.length;
+  this.width = object.width;
+  this.height = object.height;
+}
+volume(){
+  return this.length * this.width * this.height;
+}
+surfaceArea(){
+  return 2 * (this.length * this.width + this.height * this.length + this.width * this.height);
+}
 }
 
-
+// const cuboidTwo = new CuboidMakerTwo(4, 5, 5);
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
 // console.log(cuboidTwo.volume()); // 100
 // console.log(cuboidTwo.surfaceArea()); // 130
