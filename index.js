@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-//the internal function is using closure to reach outside of it's own scope to access the information. 
+//the internal function is using closure to reach outside of it's own scope to access the information.
 
 
 
@@ -186,7 +186,7 @@ CuboidMaker.prototype.surfaceArea = function(){
 
 
 
-  // const cuboid = new CuboidMaker(4, 5, 5);
+  const cuboid = new CuboidMaker({ length: 4, width: 5, height: 5 });
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
@@ -210,7 +210,7 @@ surfaceArea(){
 }
 }
 
-// const cuboidTwo = new CuboidMakerTwo(4, 5, 5);
+ const cuboidTwo = new CuboidMakerTwo({ length: 4, width: 5, height: 5 });
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
 // console.log(cuboidTwo.volume()); // 100
 // console.log(cuboidTwo.surfaceArea()); // 130
