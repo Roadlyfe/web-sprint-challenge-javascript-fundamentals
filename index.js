@@ -28,12 +28,15 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
-  }
+function summation(num) {
+  let sum = 0;
+  for(let i = 0; i <= num; i++){
+sum = sum + i;
+   }
+   return sum;
+ }
  
-
+console.log(summation(4));
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
 
@@ -56,19 +59,25 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(array){
+    let names = []; 
+    array.forEach(function(item){
+       names.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
+    });
+    return names;
   }
   
-
+console.log(animalNames(zooAnimals));
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
   Using lowerCaseNames use .map() to create a new array of strings with the animal's names in lowercase and return the new array. 
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array){
+    const lowerCaseNames = array.map(item => item.animal_name.toLowerCase());
+    console.log(lowerCaseNames);
+    return lowerCaseNames;
   }
   
   
